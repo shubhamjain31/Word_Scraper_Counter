@@ -8,9 +8,9 @@ This covers the following aspects of NLP :
 #  Prerequisite:- 
 - Python
 - BeautifulSoup4 for Web Scraping
-- requests for Getting url of the websites 
+- requests for Getting url of the website 
 - NLTK for Natural Language Processing (NLP)
-- Pandas for Data Manipulation
+- Pandas for Data Manipulation  
 _ Matplotlip for Data Visualization
 - Document for creating (.docx) files
 
