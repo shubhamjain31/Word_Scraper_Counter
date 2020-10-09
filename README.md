@@ -15,5 +15,5 @@ _ Matplotlip for Data Visualization
 - Document for creating (.docx) files
 
 # File:-  
-index.py- used to scrap out the content from the web page and create a list of content. NLP is used for text preprocessing and handling data .Also used a zip function combining data of three iterable elements together(i.e.,list of Word, list of word Type and list of word frequency).And create a table of 100 most common words with type and frequency in document using python-docx library & save the document.  
+index.py- used to scrap out the content from the web page and create a list of content. NLP is used for text preprocessing and handling data .Also used a zip function to combining data of three iterable elements together(i.e.,list of Word, list of word Type and list of word frequency).And create a table of 100 most common words with type and frequency in document using python-docx library & save the document.  
 To run the program: run the "***index.py***" file.
