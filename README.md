@@ -11,7 +11,7 @@ This covers the following aspects of NLP :
 - requests for Getting url of the website 
 - NLTK for Natural Language Processing (NLP)
 - Pandas for Data Manipulation  
-_ Matplotlip for Data Visualization
+- Matplotlip for Data Visualization
 - Document for creating (.docx) files
 
 # File:-  
