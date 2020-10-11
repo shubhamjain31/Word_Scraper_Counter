@@ -7,9 +7,13 @@ from docx import Document
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#get url 
-url = 'http://quotes.toscrape.com'
-page = requests.get(url)
+#get url  from user
+url = input("Enter url :")
+full_url = 'http://'+url
+new_url = full_url.replace("www.", "")
+
+#new_url = 'http://quotes.toscrape.com'
+page = requests.get(new_url)
 
 #extract content of the page
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -24,6 +28,10 @@ quotes = [q.text.replace('“', '').replace('”', '') for q in quote]
 s = ' '
 s = s.join(quotes)
 
+#remove special characters
+bad_chars = [';', ':', '!', ".","*",",","-"]
+s = ''.join(i for i in s if not i in bad_chars)
+
 #extract words in token
 wList = word_tokenize(s)
 print(wList)
@@ -35,7 +43,7 @@ wordList = [word for word in wList if not word in stop_words]
 print(wordList)
 
 #get a words type
-word_type = nltk.pos_tag(wordsList)
+word_type = nltk.pos_tag(wordList)
 print(len(word_type))
 
 #get a word type with frequency
@@ -85,7 +93,7 @@ document.add_page_break()
 document.save('demo.docx')
 
 #Create frequency histogram of 50 most common words a
-fd = nltk.FreqDist(wordsList)
+fd = nltk.FreqDist(wordList)
 fd.plot(20)
 
 #Create DataFrame
